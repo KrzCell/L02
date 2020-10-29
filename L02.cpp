@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 #define Zadanie2A
@@ -19,8 +20,19 @@ int main()
 	cout << "Podaj wartosc b = ";
 	cin >> b;
 
-}
+	if (sin(a * x + b) != 0)
+	{
+		f = cos(a * x - b) / sin(a * x + b);
+		cout << "f(x) = " << f << endl;
+	}
+	else
+	{
+		cout << "Mianownik rowny 0!" << endl;
+	}
 
+	
+
+}
 #endif // Zadanie2A
 
 
