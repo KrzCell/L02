@@ -21,7 +21,7 @@ int main()
 	cin >> b;
 
 	// a)
-	
+
 	if (sin(a * x + b) != 0)
 	{
 		f = cos(a * x - b) / sin(a * x + b);
@@ -29,22 +29,34 @@ int main()
 	}
 	else
 	{
-		cout << "Mianownik rowny 0!" << endl;
+		cout << "Mianownik rowny 0" << endl;
 	}
 
 	// b)
-	
-	if ((a + fabs(2.5 * x + b)) >=0)
+
+	if ((a + fabs(2.5 * x + b)) >= 0)
 	{
 		f = pow((a + fabs(2.5 * x + b)), 1.0 / 6.0);
 		cout << "g(x) = " << setprecision(5) << f << endl;
 	}
 	else
 	{
-		cout << "Pierwiastkowanie nie jest mozliwe!" << endl;
+		cout << "Pierwiastkowanie nie jest mozliwe, poniewaz wyrazenie pod pierwiastkiem <0" << endl;
 	}
 
+	// c)
+
+	if (a > 0 && a != 1 && b > 0)
+	{
+		f = log(b) / log(a); // wykorzystanie wlasnosci logarytmu
+		cout << "h(x) = " << setprecision(5) << f << endl;
+	}
+	else
+	{
+		cout << "Logarytmowanie nie jest mozliwe" << endl;
+	}
 }
+
 #endif // Zadanie2A
 
 
