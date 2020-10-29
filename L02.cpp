@@ -240,7 +240,16 @@ int main()
 						cout << "Test " << n << ": Fail" << endl;
 					}
 				}
+				else {
+					cout << "Test " << n << ": Fail" << endl;
+				}
 			}
+			else {
+				cout << "Test " << n << ": Fail" << endl;
+			}
+		}
+		else {
+			cout << "Test " << n << ": Fail" << endl;
 		}
 		break;
 	}
