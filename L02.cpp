@@ -20,17 +20,29 @@ int main()
 	cout << "Podaj wartosc b = ";
 	cin >> b;
 
+	// a)
+	
 	if (sin(a * x + b) != 0)
 	{
 		f = cos(a * x - b) / sin(a * x + b);
-		cout << "f(x) = " << f << endl;
+		cout << "f(x) = " << setprecision(5) << f << endl;
 	}
 	else
 	{
 		cout << "Mianownik rowny 0!" << endl;
 	}
 
+	// b)
 	
+	if ((a + fabs(2.5 * x + b)) >=0)
+	{
+		f = pow((a + fabs(2.5 * x + b)), 1.0 / 6.0);
+		cout << "g(x) = " << setprecision(5) << f << endl;
+	}
+	else
+	{
+		cout << "Pierwiastkowanie nie jest mozliwe!" << endl;
+	}
 
 }
 #endif // Zadanie2A
