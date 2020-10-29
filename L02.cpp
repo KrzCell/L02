@@ -88,13 +88,35 @@ int main()
 int main() 
 {
 	double a = 0, b = 0, c = 0, x1 = 0, x2 = 0, delta = 0;
-
+	cout << "Podaj a = ";
+	cin >> a;
+	cout << "Podaj b = ";
+	cin >> b;
+	cout << "Podaj c = ";
+	cin >> c;
 
 
 	if (a != 0)
 	{
 		delta = b * b - 4 * a * c;
-
+		if (delta >= 0)
+		{
+			if (delta > 0)
+			{
+				x1 = ((-1) * b - sqrt(delta)) / (2 * a);
+				x2 = ((-1) * b + sqrt(delta)) / (2 * a);
+				cout << "x1 = " << x1 << " x2 = " << x2 << endl;
+			}
+			else
+			{
+				x1 = ((-1) * b) / (2 * a);
+				cout << "x1 = x2 = " << x1 << endl;
+			}
+		}
+		else
+		{
+			cout << "x:{}" << endl;
+		}
 
 	}
 	else
@@ -122,5 +144,5 @@ int main()
 #endif // Zadanie2B
 
 
-//x1 = ((-1) * c) / b;
+
 
