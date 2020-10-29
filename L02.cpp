@@ -146,10 +146,40 @@ int main()
 #ifdef Zadanie2C
 int main()
 {
-	double a, b, c;
-	cout << "Podaj bok a: "; cin >> a;
-	cout << "Podaj bok b: "; cin >> b;
-	cout << "Podaj bok c: "; cin >> c;
+	double a, b, c, pole;
+	int n = 0;
+	bool test = false, rboczny, rramienny, prost, roznoboczny;
+	
+	cout << "1 lub 2 -> ";
+	cin >> n;
+	switch (n)
+	{
+	case 1:
+		a = 3;
+		b = 3;
+		c = 3;
+		pole = 3.89711;
+		rboczny = true;
+		rramienny = true;
+		roznoboczny = false;
+		prost = false;
+		break;
+	case 2:
+		a = 3;
+		b = 4;
+		c = 3;
+		pole = 4.47214;
+		rboczny = false;
+		rramienny = true;
+		roznoboczny = false;
+		prost = false;
+		break;
+	default:
+		a = 0;
+		b = 0;
+		c = 0;
+		break;
+	}
 
 	if (0 < a && 0 < b && 0 < c)
 	{
