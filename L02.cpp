@@ -146,9 +146,9 @@ int main()
 #ifdef Zadanie2C
 int main()
 {
-	double a, b, c, pole;
+	double a, b, c, p1;
 	int n = 0;
-	bool test = false, rboczny, rramienny, prost, roznoboczny;
+	bool rboczny = false, rramienny = false, prost = false, roznoboczny = false, t1=false, t2=false, t3=false, t4=false;
 	
 	cout << "1 lub 2 -> ";
 	cin >> n;
@@ -158,7 +158,7 @@ int main()
 		a = 3;
 		b = 3;
 		c = 3;
-		pole = 3.89711;
+		p1 = 3.89711;
 		rboczny = true;
 		rramienny = true;
 		roznoboczny = false;
@@ -167,12 +167,12 @@ int main()
 	case 2:
 		a = 3;
 		b = 4;
-		c = 3;
-		pole = 4.47214;
+		c = 5;
+		p1 = 6;
 		rboczny = false;
-		rramienny = true;
-		roznoboczny = false;
-		prost = false;
+		rramienny = false;
+		roznoboczny = true;
+		prost = true;
 		break;
 	default:
 		a = 0;
@@ -190,18 +190,60 @@ int main()
 			cout << "Pole trojkata wynosi: " << pole << endl;
 
 			if (a == b || b == c || c == a)
-				cout << "Mozna utworzyc trojkat rownoramienny\n";
+			{
+				cout << "Mozna utworzyc trojkat rownoramienny\n"; t1 = true;
+			}
+			else {
+				t1 = false;
+			}
 			if (a == b && b == c && c == a)
-				cout << "Mozna utworzyc trojkat rownoboczny\n";
+			{
+				cout << "Mozna utworzyc trojkat rownoboczny\n"; t2 = true;
+			}
+			else {
+				t2 = false;
+			}
 			if (a != b && b != c && c != a)
-				cout << "Mozna utworzyc trojkat roznoboczny\n";
-			if (c * c == (a * a + b * b) || b * b == (a * a + b * b) || a * a == (b * b + c * c))
-				cout << "Mozna utworzyc trojkat prostokatny\n";
+			{
+				cout << "Mozna utworzyc trojkat roznoboczny\n"; t3 = true;
+			}
+			else {
+				t3 = false;
+			}
+			if (c == sqrt(a * a + b * b) || b == sqrt(a * a + b * b) || a == sqrt(b * b + c * c))
+			{
+				cout << "Mozna utworzyc trojkat prostokatny\n"; t4 = true;
+			}
+			else {
+				t4 = false;
+			}
 
 		}
 		else cout << "Z tych bokow nie da sie utworzyc trojkata!\n";
 	}
 	else cout << "Boki nie sa dodatnie!\n";
+
+	switch (n)
+	{
+	default: case 1: case 2:
+		if (prost==t4)
+		{
+			if (rramienny == t1)
+			{
+				if(rboczny == t2)
+				{
+					if (roznoboczny == t3)
+					{
+						cout << "Test " << n << ": Ok" << endl;
+					}
+					else {
+						cout << "Test " << n << ": Fail" << endl;
+					}
+				}
+			}
+		}
+		break;
+	}
 
 }
 #endif //Zadanie2C
