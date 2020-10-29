@@ -46,6 +46,7 @@ int main()
 
 	// c)
 
+	/*  Inne rozwiazanie Zadania 2A c)
 	if (a > 0 && a != 1 && b > 0)
 	{
 		f = log(b) / log(a); // wykorzystanie wlasnosci logarytmu
@@ -54,6 +55,31 @@ int main()
 	else
 	{
 		cout << "Logarytmowanie nie jest mozliwe" << endl;
+	}
+	*/
+
+	if (a > 0)
+	{
+		if (a != 1)
+		{
+			if (b > 0)
+			{
+				f = log(b) / log(a); // wykorzystanie wlasnosci logarytmu
+				cout << "h(x) = " << setprecision(5) << f << endl;
+			}
+			else
+			{
+				cout << "Liczba logarytmowana <= 0" << endl;
+			}
+		}
+		else
+		{
+			cout << "Podstawa logarytmu = 1" << endl;
+		}
+	}
+	else 
+	{
+		cout << "Podstawa logarytmu <= 0" << endl;
 	}
 }
 
