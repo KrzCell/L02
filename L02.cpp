@@ -6,7 +6,7 @@
 #include <iomanip>
 using namespace std;
 
-#define Zadanie2A
+#define Zadanie2B
 
 #ifdef Zadanie2A
 int main()
@@ -82,7 +82,46 @@ int main()
 		cout << "Podstawa logarytmu <= 0" << endl;
 	}
 }
-
 #endif // Zadanie2A
+
+#ifdef Zadanie2B
+int main() 
+{
+	double a = 0, b = 0, c = 0, x1 = 0, x2 = 0;
+
+	if (a != 0)
+	{
+		if (b != 0)
+		{
+			if (c != 0)
+			{
+
+			}
+			else
+			{
+
+			}
+		}
+		else
+		{
+
+		}
+	}
+	else
+	{
+		if (b == 0)
+		{
+			cout << "x:{}" << endl;
+		}
+		else
+		{
+			x1 = ((-1) * c) / b;
+		}
+	}
+
+}
+#endif // Zadanie2B
+
+
 
 
