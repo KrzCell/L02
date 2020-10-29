@@ -6,7 +6,7 @@
 #include <iomanip>
 using namespace std;
 
-#define Zadanie2B
+#define Zadanie2C
 
 #ifdef Zadanie2A
 int main()
@@ -142,6 +142,39 @@ int main()
 
 }
 #endif // Zadanie2B
+
+#ifdef Zadanie2C
+int main()
+{
+	double a, b, c;
+	cout << "Podaj bok a: "; cin >> a;
+	cout << "Podaj bok b: "; cin >> b;
+	cout << "Podaj bok c: "; cin >> c;
+
+	if (0 < a && 0 < b && 0 < c)
+	{
+		if (a < b + c || b < a + c || c < a + b)
+		{
+			double p = (a + b + c) * 0.5;
+			double pole = sqrt(p * (p - a) * (p - b) * (p - c));
+			cout << "Pole trojkata wynosi: " << pole << endl;
+
+			if (a == b || b == c || c == a)
+				cout << "Mozna utworzyc trojkat rownoramienny\n";
+			if (a == b && b == c && c == a)
+				cout << "Mozna utworzyc trojkat rownoboczny\n";
+			if (a != b && b != c && c != a)
+				cout << "Mozna utworzyc trojkat roznoboczny\n";
+			if (c * c == (a * a + b * b) || b * b == (a * a + b * b) || a * a == (b * b + c * c))
+				cout << "Mozna utworzyc trojkat prostokatny\n";
+
+		}
+		else cout << "Z tych bokow nie da sie utworzyc trojkata!\n";
+	}
+	else cout << "Boki nie sa dodatnie!\n";
+
+}
+#endif //Zadanie2C
 
 
 
