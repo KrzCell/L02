@@ -87,41 +87,40 @@ int main()
 #ifdef Zadanie2B
 int main() 
 {
-	double a = 0, b = 0, c = 0, x1 = 0, x2 = 0;
+	double a = 0, b = 0, c = 0, x1 = 0, x2 = 0, delta = 0;
+
+
 
 	if (a != 0)
 	{
-		if (b != 0)
-		{
-			if (c != 0)
-			{
+		delta = b * b - 4 * a * c;
 
-			}
-			else
-			{
 
-			}
-		}
-		else
-		{
-
-		}
 	}
 	else
 	{
 		if (b == 0)
 		{
-			cout << "x:{}" << endl;
+			if (c == 0)
+			{
+				cout << "x:R" << endl;
+			}
+			else
+			{
+				cout << "x:{}" << endl;
+			}
 		}
 		else
 		{
 			x1 = ((-1) * c) / b;
+			cout << "x0 = " << x1 << endl;
 		}
+		
 	}
 
 }
 #endif // Zadanie2B
 
 
-
+//x1 = ((-1) * c) / b;
 
